@@ -4,7 +4,7 @@ class Todo {
     this._templateElement = document.querySelector(selector);
   }
 
-  _checkboxEl() {
+  _initCheckbox() {
     this._todoCheckboxEl = this._todoElement.querySelector(".todo__completed");
     const todoLabel = this._todoElement.querySelector(".todo__label");
 
@@ -16,7 +16,6 @@ class Todo {
   _setEventListeners() {
     this._todoCheckboxEl.addEventListener("change", () => {
       this._data.completed = !this._data.completed;
-      console.log(this._data.completed);
     });
 
     const todoDeleteBtn = this._todoElement.querySelector(".todo__delete-btn");
@@ -35,7 +34,7 @@ class Todo {
 
     todoNameEl.textContent = this._data.name;
 
-    this._checkboxEl();
+    this._initCheckbox();
     this._setEventListeners();
 
     const dueDate = new Date(this._data.date);
