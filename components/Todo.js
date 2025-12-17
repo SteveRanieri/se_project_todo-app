@@ -1,5 +1,3 @@
-import { initialTodos, validationConfig } from "../utils/constants.js";
-
 class Todo {
   constructor(data, selector) {
     this._data = data;
@@ -25,7 +23,6 @@ class Todo {
 
     todoDeleteBtn.addEventListener("click", () => {
       this._todoElement.remove();
-      console.log();
     });
   }
 
@@ -55,6 +52,3 @@ class Todo {
 }
 
 export default Todo;
-
-//   return todoElement;
-// };
