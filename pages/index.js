@@ -10,8 +10,6 @@ import TodoCounter from "../components/TodoCounter.js";
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopupElement = document.querySelector("#add-todo-popup");
 const addTodoForm = addTodoPopupElement.querySelector(".popup__form");
-const addTodoCloseBtn = addTodoPopupElement.querySelector(".popup__close");
-const todosList = document.querySelector(".todos__list");
 
 function handleCheck(completed) {
   todoCounter.updateCompleted(completed);
